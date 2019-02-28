@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28621.142
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server\Server.csproj", "{9CD75FF6-F7B1-4214-9DC3-61C8474B24F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatClient", "ChatClient\ChatClient.csproj", "{32AC56C7-7C38-41E6-8A14-9D9A48945183}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleClient", "ConsoleClient\ConsoleClient.csproj", "{3C7E96E8-AE70-463F-A7F8-2C9CA0DBC7DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9CD75FF6-F7B1-4214-9DC3-61C8474B24F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CD75FF6-F7B1-4214-9DC3-61C8474B24F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CD75FF6-F7B1-4214-9DC3-61C8474B24F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CD75FF6-F7B1-4214-9DC3-61C8474B24F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32AC56C7-7C38-41E6-8A14-9D9A48945183}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32AC56C7-7C38-41E6-8A14-9D9A48945183}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32AC56C7-7C38-41E6-8A14-9D9A48945183}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32AC56C7-7C38-41E6-8A14-9D9A48945183}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C7E96E8-AE70-463F-A7F8-2C9CA0DBC7DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C7E96E8-AE70-463F-A7F8-2C9CA0DBC7DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C7E96E8-AE70-463F-A7F8-2C9CA0DBC7DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C7E96E8-AE70-463F-A7F8-2C9CA0DBC7DB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E49A7273-568C-448A-9E7D-3110EA2B7D5D}
+	EndGlobalSection
+EndGlobal
