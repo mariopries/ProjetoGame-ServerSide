@@ -4,14 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9CD75FF6-F7B1-4214-9DC3-61C8474B24F1}</ProjectGuid>
+    <ProjectGuid>{99CD4BDF-175B-49F9-8E64-0454ABE0414B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Server</RootNamespace>
     <AssemblyName>Server</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,22 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ExitGamesLibs">
-      <HintPath>..\..\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\lib\ExitGamesLibs.dll</HintPath>
-    </Reference>
-    <Reference Include="Photon.SocketServer">
-      <HintPath>..\..\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\lib\Photon.SocketServer.dll</HintPath>
-    </Reference>
-    <Reference Include="PhotonHive">
-      <HintPath>..\..\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\Loadbalancing\Master\bin\PhotonHive.dll</HintPath>
-    </Reference>
-    <Reference Include="PhotonHostRuntimeInterfaces">
-      <HintPath>..\..\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\lib\PhotonHostRuntimeInterfaces.dll</HintPath>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="PhotonLoadbalancingApi">
-      <HintPath>..\..\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\lib\PhotonLoadbalancingApi.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -57,16 +42,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Base\BaseCalculation.cs" />
-    <Compile Include="Chat\ChatPeer.cs" />
-    <Compile Include="Chat\ChatServer.cs" />
-    <Compile Include="Constructions\BuilderSpawn.cs" />
-    <Compile Include="Constructions\Castle.cs" />
-    <Compile Include="Constructions\Construction.cs" />
-    <Compile Include="Constructions\Tower.cs" />
-    <Compile Include="Operations\Operations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Spawn\Spawn.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Photon.Common\Photon.Common.csproj">
+      <Project>{c48983e1-4294-442a-bd80-961af5ca74ce}</Project>
+      <Name>Photon.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

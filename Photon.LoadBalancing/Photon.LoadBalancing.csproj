@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9CD75FF6-F7B1-4214-9DC3-61C8474B24F1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Server</RootNamespace>
+    <AssemblyName>Photon.LoadBalancing</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'PhotonDesenvolvimento|AnyCPU'">
+    <OutputPath>bin\PhotonDesenvolvimento\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ExitGames.Logging.Log4Net, Version=1.0.4.0, Culture=neutral, PublicKeyToken=eac0edd9746a4aa0, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\lib\ExitGames.Logging.Log4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="ExitGamesLibs">
+      <HintPath>..\..\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\lib\ExitGamesLibs.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\lib\Newtonsoft\Newtonsoft.Json.6.0.8\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Photon.SocketServer">
+      <HintPath>..\..\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\lib\Photon.SocketServer.dll</HintPath>
+    </Reference>
+    <Reference Include="PhotonHive">
+      <HintPath>..\..\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\Loadbalancing\Master\bin\PhotonHive.dll</HintPath>
+    </Reference>
+    <Reference Include="PhotonHivePlugin, Version=1.0.15.11060, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\Loadbalancing\GameServer\bin\PhotonHivePlugin.dll</HintPath>
+    </Reference>
+    <Reference Include="PhotonHostRuntimeInterfaces">
+      <HintPath>..\..\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\lib\PhotonHostRuntimeInterfaces.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="PhotonLoadbalancingApi">
+      <HintPath>..\..\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\lib\PhotonLoadbalancingApi.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Common">
+      <HintPath>..\..\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\lib\ServiceStack\ServiceStack.Common.3.9.54\lib\net35\ServiceStack.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Interfaces">
+      <HintPath>..\..\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\lib\ServiceStack\ServiceStack.Common.3.9.54\lib\net35\ServiceStack.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Redis">
+      <HintPath>..\..\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\lib\ServiceStack\ServiceStack.Redis.3.9.71\lib\net35\ServiceStack.Redis.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\..\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\Loadbalancing\GameServer\bin\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\CommonSettings.cs" />
+    <Compile Include="Common\DictionaryExtensions.cs" />
+    <Compile Include="Common\LBErrorMessages.cs" />
+    <Compile Include="Common\NodesReader.cs" />
+    <Compile Include="Common\OperationHandlerBase.cs" />
+    <Compile Include="Common\S2SCustomTypeCacheMan.cs" />
+    <Compile Include="Events\AppStatsEvent.cs" />
+    <Compile Include="Events\EventCode.cs" />
+    <Compile Include="Events\GameListEvent.cs" />
+    <Compile Include="Events\GameListUpdateEvent.cs" />
+    <Compile Include="Events\GameServerOfflineEvent.cs" />
+    <Compile Include="Events\MatchEvent.cs" />
+    <Compile Include="Events\QueueEvent.cs" />
+    <Compile Include="GameServer\ApplicationStatsPublisher.cs" />
+    <Compile Include="GameServer\Base\BaseCalculation.cs" />
+    <Compile Include="GameServer\Chat\ChatPeer.cs" />
+    <Compile Include="GameServer\Chat\ChatServer.cs" />
+    <Compile Include="GameServer\Constructions\BuilderSpawn.cs" />
+    <Compile Include="GameServer\Constructions\Castle.cs" />
+    <Compile Include="GameServer\Constructions\Construction.cs" />
+    <Compile Include="GameServer\Constructions\Tower.cs" />
+    <Compile Include="GameServer\Game.cs" />
+    <Compile Include="GameServer\GameApplication.cs" />
+    <Compile Include="GameServer\GameCache.cs" />
+    <Compile Include="GameServer\GameClientPeer.cs" />
+    <Compile Include="GameServer\GameMessageCodes.cs" />
+    <Compile Include="GameServer\GameServerSettings.cs" />
+    <Compile Include="GameServer\Global.cs" />
+    <Compile Include="GameServer\MasterServerConnection.cs" />
+    <Compile Include="GameServer\MasterServerConnectionBase.cs" />
+    <Compile Include="GameServer\OutgoingMasterServerPeer.cs" />
+    <Compile Include="GameServer\Spawn\Spawn.cs" />
+    <Compile Include="MasterServer\ApplicationStats.cs" />
+    <Compile Include="MasterServer\ChannelLobby\GameChannel.cs" />
+    <Compile Include="MasterServer\ChannelLobby\GameChannelKey.cs" />
+    <Compile Include="MasterServer\ChannelLobby\GameChannelList.cs" />
+    <Compile Include="MasterServer\GameApplication.cs" />
+    <Compile Include="MasterServer\GameServer\GameServerCollection.cs" />
+    <Compile Include="MasterServer\GameServer\GameServerState.cs" />
+    <Compile Include="MasterServer\GameServer\IncomingGameServerPeer.cs" />
+    <Compile Include="MasterServer\Lobby\AppLobby.cs" />
+    <Compile Include="MasterServer\Lobby\AsyncRandomGameList.cs" />
+    <Compile Include="MasterServer\Lobby\GameDataBase.cs" />
+    <Compile Include="MasterServer\Lobby\GameList.cs" />
+    <Compile Include="MasterServer\Lobby\GameListBase.cs" />
+    <Compile Include="MasterServer\Lobby\GameState.cs" />
+    <Compile Include="MasterServer\Lobby\IGameList.cs" />
+    <Compile Include="MasterServer\Lobby\IGameListSubscription.cs" />
+    <Compile Include="MasterServer\Lobby\ILobbyPeer.cs" />
+    <Compile Include="MasterServer\Lobby\LinkedListDictionary.cs" />
+    <Compile Include="MasterServer\Lobby\LobbyFactory.cs" />
+    <Compile Include="MasterServer\Lobby\LobbyStatsPublisher.cs" />
+    <Compile Include="MasterServer\Lobby\PeerState.cs" />
+    <Compile Include="MasterServer\Lobby\SqlGameList.cs" />
+    <Compile Include="MasterServer\MasterApplication.cs" />
+    <Compile Include="MasterServer\MasterClientPeer.cs" />
+    <Compile Include="MasterServer\MasterServerSettings.cs" />
+    <Compile Include="MasterServer\OperationHandler\OperationHandlerAuthenticating.cs" />
+    <Compile Include="MasterServer\OperationHandler\OperationHandlerDefault.cs" />
+    <Compile Include="MasterServer\OperationHandler\OperationHandlerInitial.cs" />
+    <Compile Include="MasterServer\OperationHelper.cs" />
+    <Compile Include="MasterServer\PlayerCache.cs" />
+    <Compile Include="MasterServer\RedirectedClientPeer.cs" />
+    <Compile Include="Operations\AuthenticateRequest.cs" />
+    <Compile Include="Operations\AuthenticateResponse.cs" />
+    <Compile Include="Operations\FindFriendsRequest.cs" />
+    <Compile Include="Operations\FindFriendsResponse.cs" />
+    <Compile Include="Operations\GetLobbyStatsRequest.cs" />
+    <Compile Include="Operations\GetLobbyStatsResponse.cs" />
+    <Compile Include="Operations\JoinLobbyRequest.cs" />
+    <Compile Include="Operations\JoinRandomGameRequest.cs" />
+    <Compile Include="Operations\JoinRandomGameResponse.cs" />
+    <Compile Include="Operations\JoinRandomType.cs" />
+    <Compile Include="Operations\OperationCode.cs" />
+    <Compile Include="Operations\ParameterCode.cs" />
+    <Compile Include="Operations\RedirectRepeatResponse.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServerToServer\Events\AuthenticateUpdateEvent.cs" />
+    <Compile Include="ServerToServer\Events\RemoveGameEvent.cs" />
+    <Compile Include="ServerToServer\Events\ServerEventCode.cs" />
+    <Compile Include="ServerToServer\Events\ServerParameterCode.cs" />
+    <Compile Include="ServerToServer\Events\UpdateAppStatsEvent.cs" />
+    <Compile Include="ServerToServer\Events\UpdateGameEvent.cs" />
+    <Compile Include="ServerToServer\Events\UpdateServerEvent.cs" />
+    <Compile Include="ServerToServer\Operations\OperationCode.cs" />
+    <Compile Include="ServerToServer\Operations\RegisterGameServer.cs" />
+    <Compile Include="ServerToServer\Operations\RegisterGameServerResponse.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="log4net.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Photon.Common\Photon.Common.csproj">
+      <Project>{c48983e1-4294-442a-bd80-961af5ca74ce}</Project>
+      <Name>Photon.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Server\Server.csproj">
+      <Project>{99cd4bdf-175b-49f9-8e64-0454abe0414b}</Project>
+      <Name>Server</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /s/y $(ProjectDir)\bin\PhotonDesenvolvimento C:\Projetos\PhotonServer\Photon-Server-Testes\deploy\Loadbalancing\GameServer\bin\
+xcopy /s/y $(ProjectDir)\bin\PhotonDesenvolvimento C:\Projetos\PhotonServer\Photon-Server-Testes\deploy\Loadbalancing\Master\bin\</PostBuildEvent>
+  </PropertyGroup>
+</Project>
