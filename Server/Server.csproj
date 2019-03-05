@@ -72,6 +72,14 @@
     <None Include="app.config" />
     <None Include="log4net.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Lib\ExitGames.Logging.Log4Net.dll" />
+    <Content Include="Lib\log4net.dll" />
+    <Content Include="Lib\Newtonsoft.Json.dll" />
+    <Content Include="Lib\Photon.SocketServer.dll" />
+    <Content Include="Lib\PhotonHive.dll" />
+    <Content Include="Lib\PhotonHivePlugin.dll" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>xcopy /s/y $(ProjectDir)\bin\Debug C:\Projetos\PhotonServer\Photon-Server-Testes\deploy\Loadbalancing\GameServer\bin\
