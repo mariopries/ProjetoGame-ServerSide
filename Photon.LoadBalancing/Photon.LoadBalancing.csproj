@@ -191,14 +191,10 @@
       <Project>{c48983e1-4294-442a-bd80-961af5ca74ce}</Project>
       <Name>Photon.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Server\Server.csproj">
-      <Project>{99cd4bdf-175b-49f9-8e64-0454abe0414b}</Project>
-      <Name>Server</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy /s/y $(ProjectDir)\bin\PhotonDesenvolvimento C:\Projetos\PhotonServer\Photon-Server-Testes\deploy\Loadbalancing\GameServer\bin\
-xcopy /s/y $(ProjectDir)\bin\PhotonDesenvolvimento C:\Projetos\PhotonServer\Photon-Server-Testes\deploy\Loadbalancing\Master\bin\</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
 </Project>
