@@ -43,28 +43,28 @@
   <ItemGroup>
     <Reference Include="ExitGames.Logging.Log4Net, Version=1.0.4.0, Culture=neutral, PublicKeyToken=eac0edd9746a4aa0, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\lib\ExitGames.Logging.Log4Net.dll</HintPath>
+      <HintPath>..\Server\Lib\ExitGames.Logging.Log4Net.dll</HintPath>
     </Reference>
     <Reference Include="ExitGamesLibs">
       <HintPath>..\..\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\lib\ExitGamesLibs.dll</HintPath>
     </Reference>
     <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\lib\log4net.dll</HintPath>
+      <HintPath>..\Server\Lib\log4net.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\lib\Newtonsoft\Newtonsoft.Json.6.0.8\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Photon.SocketServer">
-      <HintPath>..\..\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\lib\Photon.SocketServer.dll</HintPath>
+      <HintPath>..\Server\Lib\Photon.SocketServer.dll</HintPath>
     </Reference>
     <Reference Include="PhotonHive">
-      <HintPath>..\..\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\Loadbalancing\Master\bin\PhotonHive.dll</HintPath>
+      <HintPath>..\Server\Lib\PhotonHive.dll</HintPath>
     </Reference>
     <Reference Include="PhotonHivePlugin, Version=1.0.15.11060, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\Loadbalancing\GameServer\bin\PhotonHivePlugin.dll</HintPath>
+      <HintPath>..\Server\Lib\PhotonHivePlugin.dll</HintPath>
     </Reference>
     <Reference Include="PhotonHostRuntimeInterfaces">
       <HintPath>..\..\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\lib\PhotonHostRuntimeInterfaces.dll</HintPath>
